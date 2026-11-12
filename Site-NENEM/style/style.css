@@ -1,0 +1,53 @@
+
+:root {
+    --cor-primaria: #00b881;
+    --cor-secundaria: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-primaria);
+}
+
+.cabecalho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    padding: 10px 30px;
+    background-color: var(--cor-secundaria);
+    z-index: 1000;
+    box-shadow: 2px 5px 7px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botton {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.botton a {
+    text-decoration: none;
+    color: black;
+}
+
+.nenem {
+    width: 100px;
+    height: auto;
+}
+
+.civico {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
