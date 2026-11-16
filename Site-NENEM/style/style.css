@@ -1,7 +1,9 @@
-
 :root {
     --cor-primaria: #00b881;
     --cor-secundaria: #ffffff;
+    --cor-escura: #00513a;   /* verde bem escuro: bom contraste com branco */
+    --cor-texto: #1b2a25;
+    --cor-destaque: #fff3b0; /* amarelo suave, estilo marca-texto */
 }
 
 * {
@@ -10,15 +12,21 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--cor-primaria);
+html {
+    scroll-behavior: smooth; /* rolagem suave ao clicar no menu */
 }
 
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+
 .cabecalho {
-    position: absolute;
+    position: sticky;   /* era absolute: agora ele acompanha a rolagem sem cobrir o conteúdo */
     top: 0;
-    left: 0;
-    right: 0;
     height: 120px;
     padding: 10px 30px;
     background-color: var(--cor-secundaria);
@@ -39,6 +47,15 @@ body {
 .botton a {
     text-decoration: none;
     color: black;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.botton a:hover,
+.botton a:focus-visible {
+    background-color: var(--cor-destaque);
+    outline: none;
 }
 
 .nenem {
@@ -50,4 +67,203 @@ body {
     width: 100px;
     height: 100px;
     object-fit: contain;
+}
+
+
+.secao {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 24px 20px;
+    scroll-margin-top: 120px; /* evita o cabeçalho tapar o título ao clicar no menu */
+}
+
+h1 {
+    font-size: clamp(2.4rem, 7vw, 4.2rem);
+    font-weight: 800;
+    color: var(--cor-secundaria);
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cor-secundaria);
+    margin: 40px 0 8px;
+}
+
+.secao > h2:first-child { margin-top: 0; }
+
+h3 { font-size: 1.25rem; margin-bottom: 8px; color: var(--cor-escura); }
+
+.lead {
+    max-width: 65ch;
+    margin: 12px 0 24px;
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+}
+
+.cartao {
+    background: var(--cor-secundaria);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cartao p + p,
+.cartao table,
+.cartao details { margin-top: 12px; }
+
+.passos,
+.macetes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 420px;
+}
+
+th, td {
+    border: 2px solid var(--cor-escura);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+th { background: var(--cor-escura); color: var(--cor-secundaria); }
+td.x { background: var(--cor-destaque); font-weight: 800; font-size: 1.2rem; }
+
+
+.calculadora {
+     margin-bottom: 8px;
+     }
+
+.tabela-calc input {
+    width: 100%;
+    min-width: 70px;
+    padding: 6px;
+    font: inherit;
+    text-align: center;
+    border: none;
+    background: transparent;
+}
+
+.tabela-calc input:focus { outline: 3px solid var(--cor-primaria); }
+
+.tipo {
+     border: none;
+      margin: 16px 0;
+     }
+
+.tipo legend {
+     font-weight: 600;
+      margin-bottom: 4px;
+     }
+
+.tipo label {
+     display: block;
+      padding: 2px 0;
+       cursor: pointer; 
+    }
+
+button {
+    font: inherit;
+    font-weight: 800;
+    background: var(--cor-escura);
+    color: var(--cor-secundaria);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    cursor: pointer;
+}
+
+button:hover { background: #003d2b; }
+button:focus-visible { outline: 3px solid var(--cor-destaque); outline-offset: 2px; }
+
+#resultado { margin-top: 16px; }
+#resultado .passo { padding: 4px 0; }
+#resultado .final {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: var(--cor-destaque);
+    border-radius: 8px;
+    font-weight: 800;
+}
+#resultado .erro { 
+    color: #9b1c1c;
+     font-weight: 600; 
+    }
+
+
+summary { 
+    cursor: pointer;
+     font-weight: 600;
+      color: var(--cor-escura);
+     }
+
+details ol {
+     margin: 10px 0 0 22px;
+     }
+
+details li {
+     padding: 3px 0;
+     }
+
+.macete { border-left: 8px solid var(--cor-destaque); }
+
+.rodape {
+    margin-top: 60px;
+    padding: 24px;
+    text-align: center;
+    background: var(--cor-escura);
+    color: var(--cor-secundaria);
+}
+
+
+@media (max-width: 640px) {
+    .cabecalho { 
+        height: auto; 
+        flex-wrap: wrap; 
+        gap: 8px; 
+        padding: 10px 16px; 
+    
+    }
+    .civico, .nenem { 
+        width: 60px;
+         height: 60px;
+          object-fit: 
+          contain; 
+        }
+    .botton {
+         width: 100%;
+          justify-content: center;
+           gap: 8px; 
+        }
+    .secao { 
+        scroll-margin-top: 170px; 
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+         scroll-behavior: auto;
+         }
+}
+.img{
+    height: 50px;
+    width: 50px;
+    border: 10px;
+    border-radius: 35px;
+    position: absolute;
+    top: 1850px;
+    left: 410px;
+    cursor: pointer;
 }

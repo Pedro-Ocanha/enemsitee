@@ -1,13 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site NENEM</title>
+    <title>Site NENEM | Regra de três</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/brasao_colegio.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+     
 </head>
 <body>
+
 
     <header class="cabecalho">
         <img class="civico" src="img/brasao_colegio.webp" alt="Brasão do colégio">
@@ -20,5 +25,140 @@
         </nav>
     </header>
 
+    <main>
+       
+        <section id="introducao" class="secao">
+            <h1>Regra de três</h1>
+            <p class="lead">Serve para descobrir um valor desconhecido quando você já conhece uma relação entre duas (ou mais) grandezas.</p>
+
+            <div class="passos">
+                <article class="cartao">
+                    <h3>1. </h3>
+                    <p> <b></b></p>
+                </article>
+                <article class="cartao">
+                    <h3>2. </h3>
+                    <p></p>
+                </article>
+                <article class="cartao">
+                    <h3>3. </h3>
+                    <p></p>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="conteudos" class="secao">
+            <h2>Regra de três simples</h2>
+            <p class="lead"></p>
+
+            <div class="duas-colunas">
+                <article class="cartao">
+                    <h3></h3>
+                    <p></p>
+                    <table>
+                        <tr><th>x</th><th>x</th></tr>
+                        <tr><td>x</td><td>x</td></tr>
+                        <tr><td>x</td><td>x</td></tr>
+                    </table>
+                    <p><b></b><br><b></b></p>
+                </article>
+                <article class="cartao">
+                    <h3></h3>
+                    <p></p>
+                    <table>
+                        <tr><th>x</th><th>x</th></tr>
+                        <tr><td>x</td><td>x</td></tr>
+                        <tr><td>x</td><td>x</td></tr>
+                    </table>
+                </article>
+            </div>
+
+            
+            <div class="cartao calculadora">
+                <h3>Calculadora passo a passo</h3>
+                <p>Preencha a tabela com os valores do seu problema. A célula do <b>x</b> é a que você quer saber...</p>
+
+                <table class="tabela-calc">
+                    <tr><th></th><th>Grandeza 1</th><th>Grandeza 2</th></tr>
+                    <tr>
+                        <th>Situação 1</th>
+                        <td><input type="number" id="a" aria-label="Grandeza 1, situação 1" min="0" step="any"></td>
+                        <td><input type="number" id="b" aria-label="Grandeza 2, situação 1" min="0" step="any"></td>
+                    </tr>
+                    <tr>
+                        <th>Situação 2</th>
+                        <td><input type="number" id="c" aria-label="Grandeza 1, situação 2" min="0" step="any"></td>
+                        <td class="x">x</td>
+                    </tr>
+                </table>
+
+                <fieldset class="tipo">
+                    <legend></legend>
+                    <label><input type="radio" name="tipo" value="direta" checked> aumenta (direta)</label>
+                    <label><input type="radio" name="tipo" value="inversa"> diminui (inversa)</label>
+                </fieldset>
+
+                <button type="button" id="calcular">Calcular</button>
+                <div id="resultado" aria-live="polite"></div>
+            </div>
+
+            <h2>Regra de três composta</h2>
+            <p class="lead">Três ou mais grandezas. O segredo: compare <b>uma grandeza de cada vez</b> com a que tem o x, mantendo as outras fixas.</p>
+
+            <article class="cartao">
+                <h3>Exemplo</h3>
+                <p></p>
+                <table>
+                    <tr><th>x</th><th>x</th><th>x</th></tr>
+                    <tr><td>x</td><td>x</td><td>x</td></tr>
+                    <tr><td>x</td><td>x</td><td>x</td></tr>
+                </table>
+
+                <details>
+                    <summary>Ver a análise grandeza por grandeza</summary>
+                    <ol>
+                        <li></li>
+                        <li><b></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </details>
+            </article>
+        </section>
+
+      
+        <section id="macetes" class="secao">
+            <h2>Macetes </h2>
+            <div class="macetes">
+                <article class="cartao macete">
+                    <img class="img" id="siu" src="img/siu.gif" alt="cr7">
+                    <h3>CR7 X (Método Tramontina)</h3>
+                    <p></p>
+                </article>
+                <article class="cartao macete">
+                    <h3></h3>
+                    <p></p>
+                </article>
+                <article class="cartao macete">
+                    <h3></h3>
+                    <p></p>
+                </article>
+                <article class="cartao macete">
+                    <h3></h3>
+                    <p></p>
+                </article>
+                <article class="cartao macete">
+                    <h3></h3>
+                    <p></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">Site NENEM</footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
